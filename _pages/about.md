@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Southern University of Science and Technology (SUSTech), Shenzhen, China <br> Email: liyixuan2022@mail.sustech.edu.cn"
+# subtitle: "Southern University of Science and Technology (SUSTech), Shenzhen, China <br> Email: liyixuan2022@mail.sustech.edu.cn"
 
 profile:
   align: right
