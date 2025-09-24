@@ -24,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m Yixuan Li (李怡萱), a senior undergraduate student from Southern University of Science and Technology ([SUSTech](https://www.sustech.edu.cn/en/)), advised by Prof. [Hongxin Wei](https://hongxin001.github.io/). 
+I’m Yixuan Li (李怡萱), a senior undergraduate student from Southern University of Science and Technology ([SUSTech](https://www.sustech.edu.cn/en/)), advised by Prof. [Hongxin Wei](https://hongxin001.github.io/). Previously, I was a visiting student at the University of California, San Diego ([UCSD](https://ucsd.edu/)) in Spring 2025.
 
 My research mainly focuses on **building trustworthy Artificial Intelligence (AI) systems**. Currently, I’m working on **uncertainty estimation in Large Language Models (LLMs)**. In addition, I have a broad interest in **interpretability, hallucination detection, reasoning, and policy optimization in LLMs**.
 
