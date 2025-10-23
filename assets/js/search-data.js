@@ -35,7 +35,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/assets/pdf/Yixuan_Li_s_CV__General___2025_10_.pdf";
+            window.location.href = "/assets/pdf/Yixuan_Li_CV.pdf";
           },
         },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
