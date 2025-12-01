@@ -28,6 +28,6 @@ I’m Yixuan Li (李怡萱), a senior undergraduate student from Southern Univer
 
 My research mainly focuses on **building trustworthy Artificial Intelligence (AI) systems**. Currently, I’m working on **uncertainty estimation in Large Language Models (LLMs)**, and I have a broad interest in **uncertainty estimation, hallucination detection, interpretability, and reasoning reliability in LLMs**.
 
-I am also drawn to **AI for Science**, especially where data science meets biomedicine. I am currently studying **spatial multi-omics prediction**, and I have experience working with **multimodal learning**, **Graph Neural Networks**, and **medical and spatial imaging**. I enjoy building models that feel intuitive and aligned with the underlying logic of scientific phenomena, and I am motivated by the idea that models should highlight meaningful scientific signals and bring their patterns into clearer view.
+I am also drawn to **AI for Science**, especially where data science meets biomedicine. I am currently studying **spatial multi-omics prediction**, and I have experience working with **Multimodal Learning**, **Graph Neural Networks**, and **Medical Imaging**. I enjoy building models that feel intuitive and aligned with the underlying logic of scientific phenomena, and I am motivated by the idea that models should highlight meaningful scientific signals and bring their patterns into clearer view.
 
 I am actively seeking PhD opportunities starting in Fall 2026!
