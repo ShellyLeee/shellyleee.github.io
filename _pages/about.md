@@ -26,6 +26,8 @@ latest_posts:
 
 I’m Yixuan Li (李怡萱), a senior undergraduate student from Southern University of Science and Technology ([SUSTech](https://www.sustech.edu.cn/en/)), advised by Prof. [Hongxin Wei](https://hongxin001.github.io/). Previously, I was a visiting student at the University of California, San Diego ([UCSD](https://ucsd.edu/)) in Spring 2025.
 
-My research mainly focuses on **building trustworthy Artificial Intelligence (AI) systems**. Currently, I’m working on **uncertainty estimation in Large Language Models (LLMs)**. In addition, I have a broad interest in **interpretability, hallucination detection, reasoning, and policy optimization in LLMs**.
+My research mainly focuses on **building trustworthy Artificial Intelligence (AI) systems**. Currently, I’m working on **uncertainty estimation in Large Language Models (LLMs)**, and I have a broad interest in **uncertainty estimation, hallucination detection, interpretability, and reasoning reliability in LLMs.**.
+
+I am also drawn to AI for Science, especially where data science meets biomedicine. I am currently studying **spatial multi-omics prediction**, and I have experience working with **multimodal learning**, **Graph Neural Networks**, and **medical and spatial imaging**. I enjoy building models that feel intuitive and aligned with the underlying logic of scientific phenomena, and I am motivated by the idea that models should highlight meaningful scientific signals and bring their patterns into clearer view.
 
 I am actively seeking PhD opportunities starting in Fall 2026!
