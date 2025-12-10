@@ -176,6 +176,7 @@ exclude:
   - _pages/books.md
   - _pages/teaching.md
   - _pages/profiles.md
+  - _pages/publications.md
   - _pages/repositories.md
   - _pages/dropdown.md
   - _posts/
