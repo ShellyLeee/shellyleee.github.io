@@ -65,9 +65,9 @@ ninja.data = [{
           description: "STP Open Challenge - Benchmarking Spatial Transriptomics-to-Proteomics Prediction",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-statistical-analysis-of-mental-health-outcomes-in-menopausal-women",
+          title: 'Statistical Analysis of Mental Health Outcomes in Menopausal Women',
+          description: "A rigorous statistical analysis of menopausal women’s mental health using robust testing and confounder adjustment on a confidential population dataset",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
