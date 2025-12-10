@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spatial Transcriptomics to Proteomics Prediction (STP Challenge)
-description: STP Open Challenge: Benchmarking Spatial Transriptomics-to-Proteomics Prediction
+description: STP Open Challenge - Benchmarking Spatial Transriptomics-to-Proteomics Prediction
 img: assets/img/STP_cover.jpg
 importance: 1
 category: research
