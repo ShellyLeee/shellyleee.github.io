@@ -60,9 +60,9 @@ ninja.data = [{
             },},{id: "news-i-create-my-personal-website",
           title: 'I create my personal website!',
           description: "",
-          section: "News",},{id: "projects-",
-          title: '',
-          description: "",
+          section: "News",},{id: "projects-spatial-transcriptomics-to-proteomics-prediction-stp-challenge",
+          title: 'Spatial Transcriptomics to Proteomics Prediction (STP Challenge)',
+          description: "STP Open Challenge - Benchmarking Spatial Transriptomics-to-Proteomics Prediction",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
