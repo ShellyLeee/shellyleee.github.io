@@ -2,7 +2,7 @@
 layout: page
 title: Spatial Transcriptomics to Proteomics Prediction (STP Challenge)
 description: STP Open Challenge - Benchmarking Spatial Transriptomics-to-Proteomics Prediction
-img: assets/img/STP_cover.jpg
+img: assets/img/STP_cover.png
 importance: 1
 category: research
 related_publications: true
@@ -14,7 +14,7 @@ This project develops a multimodal deep learning pipeline for the **Spatial Tran
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/STP_cover.jpg" title="STP cover" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/STP_cover.png" title="STP cover" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
