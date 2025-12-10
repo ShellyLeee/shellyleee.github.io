@@ -2,7 +2,7 @@
 layout: page
 title: Statistical Analysis of Mental Health Outcomes in Menopausal Women
 description: A rigorous statistical analysis of menopausal women’s mental health using robust testing and confounder adjustment on a confidential population dataset
-img: assets/img/menopause_cover.jpg
+img: assets/img/menopause_cover.png
 importance: 2
 category: research
 giscus_comments: true
@@ -12,7 +12,7 @@ This project investigates mental health outcomes among menopausal women using a 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/menopause_cover.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/menopause_cover.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
