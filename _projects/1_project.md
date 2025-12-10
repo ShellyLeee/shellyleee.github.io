@@ -43,7 +43,7 @@ We designed several model architectures and performed systematic ablations:
 
 ### **Results**
 
-Our best multimodal GNN model achieves **state-of-the-art performance on the STP Challenge leaderboard**, reaching a Spearman correlation of **~0.74**, ranking **1st on the public leaderboard** at the time of submission.
+Our best multimodal GNN model achieves **state-of-the-art performance on the STP Challenge leaderboard**, reaching a Spearman correlation of **~0.74**, ranking **1st on the public leaderboard** at the time of submission. You can view the [result page](https://www.codabench.org/competitions/10696/#/results-tab).
 
 Key findings include:
 
