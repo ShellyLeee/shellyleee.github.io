@@ -123,8 +123,12 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@yit020/interpretable-generative-models-through-post-hoc-concept-bottlenecks-cvpr-2025-64b55acd19cd
+  - name: Medium Blog
+    posts:
+      - url: https://medium.com/@yit020/interpretable-generative-models-through-post-hoc-concept-bottlenecks-cvpr-2025-64b55acd19cd
+        published_date: 2025-01-05
+  # - name: medium.com
+  #   rss_url: https://medium.com/?
   # - name: Google Blog
   #   posts:
   #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
