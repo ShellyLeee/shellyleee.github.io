@@ -1,81 +1,56 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Spatial Transcriptomics to Proteomics Prediction (STP Challenge)
+description: STP Open Challenge: Benchmarking Spatial Transriptomics-to-Proteomics Prediction
+img: assets/img/STP_cover.jpg
 importance: 1
-category: work
+category: research
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**GitHub:** [stpoc_gnn](https://github.com/ShellyLeee/stpoc_gnn)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This project develops a multimodal deep learning pipeline for the **Spatial Transcriptomics-to-Proteomics (STP) Challenge**, which aims to infer spatial protein expression from H&E images and RNA-seq profiles in glioma tissue. The task requires models to integrate heterogeneous spatial signals, handle irregular tissue geometry, and generalize across patients and measurement modalities.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/STP_cover.jpg" title="STP cover" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    This is our multimodal GNN approach
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### **Preprocessing and Data Integration**
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+We implemented a complete preprocessing pipeline to unify the spatial-omics inputs:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **Patch-based H&E feature extraction:** Each tissue slide is partitioned into fixed-size patches aligned to Visium spot coordinates. A pretrained **ResNet / ConvNeXt feature encoder** transforms each patch into compact morphological embeddings.
+- **RNA normalization & embedding:** Raw transcript counts are log-normalized, scaled, and projected through a **gene embedding MLP** to stabilize cross-sample variation.
+- **Spatial graph construction:** Spots are represented as nodes in a graph where edges follow spatial proximity (kNN or radius-based). This captures tissue architecture and morphological continuity.
+- **Multimodal fusion:** Visual and transcriptomic embeddings are concatenated or adaptively gated to support cross-modality information flow.
 
-{% raw %}
+### **Modeling Approach**
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+We designed several model architectures and performed systematic ablations:
 
-{% endraw %}
+- **Baseline CNN-only model:** A UNet-style image-to-protein predictor serving as an early baseline.
+- **Graph Neural Network (GNN) models:**
+    - **GCN** and **GAT** architectures operating on spatial graphs to propagate neighborhood information.
+    - **Multimodal GNN (RNA + H&E):** Node features combine visual embeddings and RNA embeddings to jointly model morphological and molecular structure.
+    - **Adapter-enhanced GNN:** A lightweight **Adapter Fusion** module improves cross-modality integration and stabilizes training across variable tissue regions.
+- **Patch-based sampling:** Mini-batching over subgraphs improves GPU efficiency and alleviates noise in highly heterogeneous slides.
+
+### **Results**
+
+Our best multimodal GNN model achieves **state-of-the-art performance on the STP Challenge leaderboard**, reaching a Spearman correlation of **~0.74**, ranking **1st on the public leaderboard** at the time of submission.
+
+Key findings include:
+
+- Incorporating spatial topology via GNNs substantially outperforms pixel-wise CNN baselines.
+- H&E features provide complementary morphological context and improve prediction of proteins with spatial gradients.
+- Adapter modules improve robustness and cross-patient generalization.
+
+### **Impact**
+
+This project demonstrates the potential of graph-based multimodal learning for biological tissue modeling, and provides a reproducible pipeline for future research in **AI for Science**, **spatial omics**, and **cross-modal biological inference**.
