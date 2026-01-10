@@ -57,8 +57,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-i-create-my-personal-website",
-          title: 'I create my personal website!',
+            },},{id: "news-i-achieved-top-1-performance-in-the-development-phase-and-top-2-performance-in-the-test-phase-of-the-stp-spatial-transcriptomics-to-proteomics-open-challenge-working-on-multimodal-learning-for-spatial-multi-omics-prediction",
+          title: 'I achieved Top-1 performance in the development phase and Top-2 performance in the...',
           description: "",
           section: "News",},{id: "projects-spatial-transcriptomics-to-proteomics-prediction-stp-challenge",
           title: 'Spatial Transcriptomics to Proteomics Prediction (STP Challenge)',
