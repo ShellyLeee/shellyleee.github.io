@@ -7,4 +7,4 @@ related_posts: false
 
 
 
-Delighted to present our work at the *Computational Spatial Multi-Omics Symposium 2026*, following our 2nd place finish in the [STP Open Challenge](https://www.codabench.org/competitions/10696/#/pages-tab).
+Delighted to present our work at the [*Computational Spatial Multi-Omics Symposium 2026*](https://wang-lab.hkust.edu.hk/others/spatial2026/index.html#schedule), following our 2nd place finish in the [STP Open Challenge](https://www.codabench.org/competitions/10696/#/pages-tab).
