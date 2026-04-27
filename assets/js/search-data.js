@@ -57,8 +57,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-i-achieved-top-1-performance-in-the-development-phase-and-top-2-performance-in-the-test-phase-of-the-stp-spatial-transcriptomics-to-proteomics-open-challenge-working-on-multimodal-learning-for-spatial-multi-omics-prediction",
-          title: 'I achieved Top-1 performance in the development phase and Top-2 performance in the...',
+            },},{id: "news-ranked-1st-dev-phase-and-2nd-test-phase-in-the-stp-open-challenge",
+          title: 'Ranked 1st (Dev Phase) and 2nd (Test Phase) in the STP Open Challenge....',
           description: "",
           section: "News",},{id: "projects-spatial-transcriptomics-to-proteomics-prediction-stp-challenge",
           title: 'Spatial Transcriptomics to Proteomics Prediction (STP Challenge)',
