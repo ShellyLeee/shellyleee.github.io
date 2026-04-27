@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/Yixuan_Li_CV.pdf";
           },
-        },{id: "post-uncertainty-estimation-methods-in-large-language-models-a-taxonomy",
+        },{id: "post-when-do-customers-leave-a-survival-analysis-of-telco-churn-behavior",
+        
+          title: "When Do Customers Leave? A Survival Analysis of Telco Churn Behavior",
+        
+        description: "Explore customer churn through a survival analysis perspective using the IBM Telco dataset. By treating churn as a time-to-event problem, we uncover how contract types, technical support, and customer characteristics influence retention over time.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/survival_analysis/";
+          
+        },
+      },{id: "post-uncertainty-estimation-methods-in-large-language-models-a-taxonomy",
         
           title: "Uncertainty Estimation Methods in Large Language Models - A Taxonomy",
         
