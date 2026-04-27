@@ -176,8 +176,6 @@ This pattern suggests that churn risk is highest early in the customer lifecycle
 
 Table 2 shows a representative excerpt from the monthly survival table used to compute the Kaplan-Meier curve.
 
-<p>Table 2 shows representative rows from the overall monthly survival table.</p>
-
 <div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
   <table class="table table-hover table-sm mb-0">
     <thead>
@@ -238,8 +236,6 @@ Customers who churned had systematically shorter tenure and higher monthly charg
 These differences are consistent with the survival analysis results. Customers who leave tend to do so earlier, and they also tend to pay higher monthly rates.
 
 Table 3 summarizes the main descriptive differences between churned and non-churned customers.
-
-<p>Table 3 summarizes the descriptive statistics by churn status.</p>
 
 <div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
   <table class="table table-hover table-sm mb-0">
@@ -310,8 +306,6 @@ This pattern is highly interpretable. Customers on month-to-month plans experien
 
 Table 4 reports the final Kaplan-Meier survival probabilities by contract type.
 
-<p>Table 4 reports the final Kaplan–Meier survival probabilities by contract type.</p>
-
 <div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
   <table class="table table-hover table-sm mb-0">
     <thead>
@@ -370,8 +364,6 @@ This suggests that senior customers in this dataset experienced higher churn ris
 
 Table 5 reports the final Kaplan-Meier survival probabilities by senior citizen status.
 
-<p>Table 5 reports the final Kaplan–Meier survival probabilities by senior citizen status.</p>
-
 <div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
   <table class="table table-hover table-sm mb-0">
     <thead>
@@ -425,8 +417,6 @@ The observed pattern was logically consistent:
 This pattern is plausible from a business perspective. Customers lacking technical support may be more vulnerable to dissatisfaction or service friction, increasing churn risk. By contrast, customers with support or with simpler service configurations tend to be more stable.
 
 Table 6 reports the final Kaplan-Meier survival probabilities by `TechSupport` status.
-
-<p>Table 6 reports the final Kaplan–Meier survival probabilities by TechSupport status.</p>
 
 <div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
   <table class="table table-hover table-sm mb-0">
