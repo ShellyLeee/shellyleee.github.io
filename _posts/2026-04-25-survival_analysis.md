@@ -8,6 +8,11 @@ categories: research-blog
 thumbnail: assets/img/survival_analysis/survival_analysis.png
 ---
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/survival_analysis/survival_analysis.png" title="survival_analysis" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 
 ## 1. Introduction
@@ -60,6 +65,7 @@ The Kaplan-Meier estimator was then approximated as:
 $$
 S(t) = \prod_{i \le t}\left(1 - \frac{d_i}{n_i}\right) 
 $$
+
 where:
 
 - $d_i$ is the number of churn events at month \(i\)
@@ -113,12 +119,34 @@ This indicates that most customers were retained at the observation endpoint, bu
 
 Table 1 summarizes the observed churn distribution in the curated dataset.
 
-| Churn status        | Customers | Percentage |
-| ------------------- | --------: | ---------: |
-| No churn / censored |     5,174 |     73.46% |
-| Churn event         |     1,869 |     26.54% |
+<div class="table-responsive">
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th>Churn status</th>
+        <th class="text-end">Customers</th>
+        <th class="text-end">Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No churn / censored</td>
+        <td class="text-end">5,174</td>
+        <td class="text-end">73.46%</td>
+      </tr>
+      <tr>
+        <td>Churn event</td>
+        <td class="text-end">1,869</td>
+        <td class="text-end">26.54%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-*Table 1. Churn distribution in the curated Telco customer dataset.*
+<div class="caption">
+  Table 1. Churn distribution in the curated Telco customer dataset
+</div>
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -148,20 +176,37 @@ This pattern suggests that churn risk is highest early in the customer lifecycle
 
 Table 2 shows a representative excerpt from the monthly survival table used to compute the Kaplan-Meier curve.
 
-| Tenure month | At risk | Events | Censored | Hazard |
-| ------------ | ------: | -----: | -------: | -----: |
-| 0            |   7,043 |      0 |       11 | 0.0000 |
-| 1            |   7,032 |    380 |      233 | 0.0540 |
-| 2            |   6,419 |    123 |      115 | 0.0192 |
-| 3            |   6,181 |     94 |      106 | 0.0152 |
-| 4            |   5,981 |     83 |       93 | 0.0139 |
-| 5            |   5,805 |     64 |       69 | 0.0110 |
-| 6            |   5,672 |     40 |       70 | 0.0071 |
-| 7            |   5,562 |     51 |       80 | 0.0092 |
-| 8            |   5,431 |     42 |       81 | 0.0077 |
-| 9            |   5,308 |     46 |       73 | 0.0087 |
+<p>Table 2 shows representative rows from the overall monthly survival table.</p>
 
-*Table 2. Representative rows from the overall monthly survival table.*
+<div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
+  <table class="table table-hover table-sm mb-0">
+    <thead>
+      <tr>
+        <th>Tenure month</th>
+        <th class="text-end">At risk</th>
+        <th class="text-end">Events</th>
+        <th class="text-end">Censored</th>
+        <th class="text-end">Hazard</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td class="text-end">7,043</td><td class="text-end">0</td><td class="text-end">11</td><td class="text-end">0.0000</td></tr>
+      <tr><td>1</td><td class="text-end">7,032</td><td class="text-end">380</td><td class="text-end">233</td><td class="text-end">0.0540</td></tr>
+      <tr><td>2</td><td class="text-end">6,419</td><td class="text-end">123</td><td class="text-end">115</td><td class="text-end">0.0192</td></tr>
+      <tr><td>3</td><td class="text-end">6,181</td><td class="text-end">94</td><td class="text-end">106</td><td class="text-end">0.0152</td></tr>
+      <tr><td>4</td><td class="text-end">5,981</td><td class="text-end">83</td><td class="text-end">93</td><td class="text-end">0.0139</td></tr>
+      <tr><td>5</td><td class="text-end">5,805</td><td class="text-end">64</td><td class="text-end">69</td><td class="text-end">0.0110</td></tr>
+      <tr><td>6</td><td class="text-end">5,672</td><td class="text-end">40</td><td class="text-end">70</td><td class="text-end">0.0071</td></tr>
+      <tr><td>7</td><td class="text-end">5,562</td><td class="text-end">51</td><td class="text-end">80</td><td class="text-end">0.0092</td></tr>
+      <tr><td>8</td><td class="text-end">5,431</td><td class="text-end">42</td><td class="text-end">81</td><td class="text-end">0.0077</td></tr>
+      <tr><td>9</td><td class="text-end">5,308</td><td class="text-end">46</td><td class="text-end">73</td><td class="text-end">0.0087</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="caption">
+  Table 2. Representative rows from the overall monthly survival table
+</div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -194,12 +239,51 @@ These differences are consistent with the survival analysis results. Customers w
 
 Table 3 summarizes the main descriptive differences between churned and non-churned customers.
 
-| Churn group         | Customers | Mean tenure (months) | SD tenure | Mean monthly charges | SD monthly charges | Mean total charges | SD total charges |
-| ------------------- | --------: | -------------------: | --------: | -------------------: | -----------------: | -----------------: | ---------------: |
-| No churn / censored |     5,174 |                37.57 |     24.11 |                61.27 |              31.09 |            2549.91 |          2329.95 |
-| Churn event         |     1,869 |                17.98 |     19.53 |                74.44 |              24.67 |            1531.80 |          1890.82 |
+<p>Table 3 summarizes the descriptive statistics by churn status.</p>
 
-*Table 3. Descriptive statistics by churn status.*
+<div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
+  <table class="table table-hover table-sm mb-0">
+    <thead>
+      <tr>
+        <th>Churn group</th>
+        <th class="text-end">Customers</th>
+        <th class="text-end">Mean tenure (months)</th>
+        <th class="text-end">SD tenure</th>
+        <th class="text-end">Mean monthly charges</th>
+        <th class="text-end">SD monthly charges</th>
+        <th class="text-end">Mean total charges</th>
+        <th class="text-end">SD total charges</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No churn / censored</td>
+        <td class="text-end">5,174</td>
+        <td class="text-end">37.57</td>
+        <td class="text-end">24.11</td>
+        <td class="text-end">61.27</td>
+        <td class="text-end">31.09</td>
+        <td class="text-end">2549.91</td>
+        <td class="text-end">2329.95</td>
+      </tr>
+      <tr>
+        <td>Churn event</td>
+        <td class="text-end">1,869</td>
+        <td class="text-end">17.98</td>
+        <td class="text-end">19.53</td>
+        <td class="text-end">74.44</td>
+        <td class="text-end">24.67</td>
+        <td class="text-end">1531.80</td>
+        <td class="text-end">1890.82</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="caption">
+  Table 3. Descriptive statistics by churn status
+</div>
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -226,13 +310,41 @@ This pattern is highly interpretable. Customers on month-to-month plans experien
 
 Table 4 reports the final Kaplan-Meier survival probabilities by contract type.
 
-| Contract type  | Final tenure month | Final survival probability |
-| -------------- | -----------------: | -------------------------: |
-| Month-to-month |                 72 |                     0.1290 |
-| One year       |                 72 |                     0.5681 |
-| Two year       |                 72 |                     0.9357 |
+<p>Table 4 reports the final Kaplan–Meier survival probabilities by contract type.</p>
 
-*Table 4. Final survival probabilities by contract type.*
+<div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
+  <table class="table table-hover table-sm mb-0">
+    <thead>
+      <tr>
+        <th>Contract type</th>
+        <th class="text-end">Final tenure month</th>
+        <th class="text-end">Final survival probability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Month-to-month</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.1290</td>
+      </tr>
+      <tr>
+        <td>One year</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.5681</td>
+      </tr>
+      <tr>
+        <td>Two year</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.9357</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="caption">
+  Table 4. Final survival probabilities by contract type
+</div>
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -258,12 +370,36 @@ This suggests that senior customers in this dataset experienced higher churn ris
 
 Table 5 reports the final Kaplan-Meier survival probabilities by senior citizen status.
 
-| Senior citizen group | Final tenure month | Final survival probability |
-| -------------------- | -----------------: | -------------------------: |
-| Non-senior customers |                 72 |                     0.6339 |
-| Senior customers     |                 72 |                     0.4213 |
+<p>Table 5 reports the final Kaplan–Meier survival probabilities by senior citizen status.</p>
 
-*Table 5. Final survival probabilities by senior citizen status.*
+<div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
+  <table class="table table-hover table-sm mb-0">
+    <thead>
+      <tr>
+        <th>Senior citizen group</th>
+        <th class="text-end">Final tenure month</th>
+        <th class="text-end">Final survival probability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Non-senior customers</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.6339</td>
+      </tr>
+      <tr>
+        <td>Senior customers</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.4213</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="caption">
+  Table 5. Final Kaplan–Meier survival probabilities by senior citizen status.
+</div>
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -290,13 +426,41 @@ This pattern is plausible from a business perspective. Customers lacking technic
 
 Table 6 reports the final Kaplan-Meier survival probabilities by `TechSupport` status.
 
-| TechSupport group   | Final tenure month | Final survival probability |
-| ------------------- | -----------------: | -------------------------: |
-| No                  |                 72 |                     0.3492 |
-| No internet service |                 72 |                     0.9015 |
-| Yes                 |                 72 |                     0.7608 |
+<p>Table 6 reports the final Kaplan–Meier survival probabilities by TechSupport status.</p>
 
-*Table 6. Final survival probabilities by TechSupport status.*
+<div class="table-responsive rounded z-depth-1 p-2 mt-3 mb-2">
+  <table class="table table-hover table-sm mb-0">
+    <thead>
+      <tr>
+        <th>TechSupport group</th>
+        <th class="text-end">Final tenure month</th>
+        <th class="text-end">Final survival probability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.3492</td>
+      </tr>
+      <tr>
+        <td>No internet service</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.9015</td>
+      </tr>
+      <tr>
+        <td>Yes</td>
+        <td class="text-end">72</td>
+        <td class="text-end">0.7608</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="caption">
+  Table 6. Final Kaplan–Meier survival probabilities by TechSupport status.
+</div>
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
